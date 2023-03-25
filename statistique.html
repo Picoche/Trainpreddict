@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--Chart.js-->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!--JS Custom-->
+  <script src="./JS_global/globalVariables.js" defer></script>
+  <script src="./Traitement_donnees/app.js" defer></script>
+  <script src="./Construction_graphiques/buildMonthlyChart.js" defer></script>
+  <script src="./Construction_graphiques/buildWeeklyChart.js" defer></script>
+  <script src="./Construction_graphiques/updateCharts.js" defer></script>
+  <script src="./Construction_graphiques/controller.js" defer></script>
+
+  <!--CSS Custom-->
+  <link rel="stylesheet" href="./style/style.css">
+
+  <title>Document</title>
+</head>
+
+<body>
+  <nav class="navbar">
+    <a href="index.html"><img src="img/trainpreddict_logo.png" alt="logo trainPreddict" class="navbar-logo"></a>
+    <div class="navbar-menu">
+      <ul>
+        <li><a href="donnees.html">Mes données</a></li>
+        <li><a href="#">Mes statistiques</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav class="navbar-tel">
+    <a href="index.html"><img src="img/trainpreddict_logo.png" alt="logo trainPreddict" class="navbar-tel-logo"></a>
+    <div class="navbar-menu-tel">
+      <ul>
+        <li><a href="donnees.html">Mes données</a></li>
+        <li><a href="#">Mes statistiques</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <h1 class="couleur">Mes statistiques</h1>
+    <h2>Choisissez une semaine ou un mois</h2>
+    <div class="select">
+      <h3>Mois : </h3>
+      <select name="mois" id="mois">
+        <option>--Choisissez un mois--</option>
+        <option value="Janvier">Janvier</option>
+        <option value="Février">Février</option>
+        <option value="Mars">Mars</option>
+        <option value="Avril">Avril</option>
+        <option value="Mai">Mai</option>
+        <option value="Juin">Juin</option>
+        <option value="Juillet">Juillet</option>
+        <option value="Août">Août</option>
+        <option value="Septembre">Septembre</option>
+        <option value="Octobre">Octobre</option>
+        <option value="Novembre">Novembre</option>
+        <option value="Décembre">Décembre</option>
+      </select>
+      <h3>Semaine :</h3>
+      <select name="semaine" id="semaine">
+        <option>--Choisissez une semaine--</option>
+        <option value="0">Semaine 1</option>
+        <option value="1">Semaine 2</option>
+        <option value="2">Semaine 3</option>
+        <option value="3">Semaine 4</option>
+        <option value="4">Semaine 5</option>
+      </select>
+    </div>
+    <div class="chart-container">
+      <canvas id="myChart"></canvas>
+    </div>
+    <div class="data-container">
+
+    </div>
+  </main>
+
+
+
+  <!-- <footer>
+    <div class="copyright">
+      <p>Copyright : TrainPreddict, Durand Gabin, Hombert Fabien, Marie Ruffier</p>
+    </div>
+  </footer> -->
+
+</body>
+
+</html>
